@@ -652,12 +652,107 @@ footer {
   justify-content: space-between;
   font-size: 14px;
 }
+/* ===================================================
+   SOBRE O PROJETO
+=================================================== */
 
+.about-project-section{
+    background:#FFFFFF;
+    padding:96px 0;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:56px;
+    align-items:flex-start;
+    margin-top:56px;
+}
+
+.about-text h3{
+    font-size:26px;
+    margin-bottom:14px;
+    color:var(--primary-text);
+}
+
+.about-text p{
+    font-size:16px;
+    color:var(--secondary-text);
+    line-height:1.8;
+    margin-bottom:36px;
+}
+
+.about-values{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.value-card{
+    background:#FFFFFF;
+    border:1px solid var(--border-color);
+    border-radius:24px;
+    padding:28px;
+    box-shadow:var(--shadow-card);
+    transition:.3s;
+}
+
+.value-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-hover);
+    border-color:#D8B4FE;
+}
+
+.value-card i{
+    width:56px;
+    height:56px;
+    display:grid;
+    place-items:center;
+    border-radius:16px;
+    background:var(--grad-official);
+    color:#FFF;
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.value-card h4{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.value-card p{
+    font-size:15px;
+    color:var(--secondary-text);
+    line-height:1.7;
+}
+/* RESPONSIVE */
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .hero-grid, .grid-4, .grid-3, .stats-grid, .founders-grid, .footer-grid, .partner-grid {
+
+  .hero-grid,
+  .grid-4,
+  .grid-3,
+  .stats-grid,
+  .founders-grid,
+  .footer-grid,
+  .partner-grid {
     grid-template-columns: 1fr;
   }
-  h1 { font-size: 40px; }
-  h2 { font-size: 32px; }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-values{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:40px;
+  }
+
+  h2{
+    font-size:32px;
+  }
+
 }
