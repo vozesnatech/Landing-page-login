@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Vozes na Tech</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/logo_vozes.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar-dark">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_vozes.png" alt="Vozes na Tech" class="logo-img" />
+        <div class="logo-text-brand">
+          VOZES<br><small>NA TECH</small>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="dashboard.html" class="nav-link active">Início</a></li>
+        <li><a href="#cursos" class="nav-link">Cursos</a></li>
+        <li><a href="#mentorias" class="nav-link">Mentorias</a></li>
+        <li><a href="#vagas" class="nav-link">Vagas</a></li>
+        <li><a href="#eventos" class="nav-link">Eventos</a></li>
+        <li><a href="#comunidade" class="nav-link">Comunidade</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" style="color: #FFFFFF; font-size: 20px; position: relative;">
+          <i class="fa-regular fa-bell"></i>
+          <span style="position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></span>
+        </a>
+        <a href="#" style="color: #FFFFFF; font-size: 20px;">
+          <i class="fa-regular fa-comment-dots"></i>
+        </a>
+        <div style="display: flex; align-items: center; gap: 12px; padding-left: 16px; border-left: 1px solid rgba(255,255,255,0.15); cursor: pointer;" onclick="toggleSidebar()">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--grad-official); color: #FFF; font-weight: 700; display: grid; place-items: center; font-size: 16px;">
+            D
+          </div>
+          <div style="color: #FFF; line-height: 1.2;">
+            <div style="font-size: 14px; font-weight: 600;">Davi Silva</div>
+            <div style="font-size: 12px; opacity: 0.75;">Ver perfil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD LAYOUT -->
+  <div class="dash-layout">
+    <!-- MAIN CONTENT -->
+    <main class="dash-main">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px;">
+        <div>
+          <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 4px;">Olá, Davi! 👋</h1>
+          <p class="body">Pronta para transformar hoje?</p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 13px; color: var(--secondary-text); font-weight: 500;">Suas áreas de interesse:</span>
+          <span style="background: #F3E8FF; color: var(--secondary); font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: var(--radius-pill);">• Desenvolvimento Front-end</span>
+          <span style="background: #F3E8FF; color: var(--secondary); font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: var(--radius-pill);">• UX/UI Design</span>
+        </div>
+      </div>
+
+      <!-- METRICS GRID -->
+      <div class="grid-4" style="margin-bottom: 40px;">
+        <div class="card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+          <div style="width: 48px; height: 48px; border-radius: 14px; background: #F3E8FF; color: var(--secondary); display: grid; place-items: center; font-size: 20px;">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <div>
+            <div style="font-size: 24px; font-weight: 700; line-height: 1;">4</div>
+            <div style="font-size: 13px; color: var(--secondary-text); margin-top: 4px;">Cursos em andamento</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+          <div style="width: 48px; height: 48px; border-radius: 14px; background: #F3E8FF; color: var(--secondary); display: grid; place-items: center; font-size: 20px;">
+            <i class="fa-solid fa-user-group"></i>
+          </div>
+          <div>
+            <div style="font-size: 24px; font-weight: 700; line-height: 1;">12</div>
+            <div style="font-size: 13px; color: var(--secondary-text); margin-top: 4px;">Mentorias agendadas</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+          <div style="width: 48px; height: 48px; border-radius: 14px; background: #F3E8FF; color: var(--secondary); display: grid; place-items: center; font-size: 20px;">
+            <i class="fa-solid fa-bookmark"></i>
+          </div>
+          <div>
+            <div style="font-size: 24px; font-weight: 700; line-height: 1;">8</div>
+            <div style="font-size: 13px; color: var(--secondary-text); margin-top: 4px;">Vagas salvas</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 24px; display: flex; align-items: center; gap: 16px;">
+          <div style="width: 48px; height: 48px; border-radius: 14px; background: #F3E8FF; color: var(--secondary); display: grid; place-items: center; font-size: 20px;">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <div style="font-size: 24px; font-weight: 700; line-height: 1;">3</div>
+            <div style="font-size: 13px; color: var(--secondary-text); margin-top: 4px;">Eventos inscritos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTINUE APRENDENDO -->
+      <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 24px;">Continue aprendendo</h3>
+
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+        <!-- TRAIL CARD -->
+        <div style="background: var(--dark-bg); background-image: var(--grad-official); color: #FFFFFF; border-radius: var(--radius-card); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: var(--shadow-card);">
+          <div>
+            <span style="display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: var(--radius-pill); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 16px; text-transform: uppercase;">TRILHA EM ANDAMENTO</span>
+            <h4 style="color: #FFFFFF; font-size: 22px; font-weight: 700; margin-bottom: 20px; line-height: 1.3;">Desenvolvimento Web com HTML, CSS e JavaScript</h4>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; font-weight: 600;">
+              <span>60% concluído</span>
+            </div>
+            <div style="height: 8px; background: rgba(255,255,255,0.25); border-radius: 999px; overflow: hidden; margin-bottom: 24px;">
+              <div style="width: 60%; height: 100%; background: #FFFFFF; border-radius: 999px;"></div>
+            </div>
+
+            <a href="#" class="btn btn-secondary" style="background: #FFFFFF; color: var(--primary-text); border: none; font-weight: 700;">
+              Continuar trilha <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- MENTOR CARD -->
+        <div class="card" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: space-between;">
+          <h4 style="font-size: 16px; font-weight: 700; align-self: flex-start; margin-bottom: 16px;">Próxima mentoria</h4>
+          <div>
+            <img src="assets/debora.jpg" alt="Débora Jansen" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid #F3E8FF; margin: 0 auto 12px;" />
+            <h5 style="font-size: 18px; font-weight: 700;">Débora Jansen</h5>
+            <p style="font-size: 13px; color: var(--secondary); font-weight: 600;">Mentora Tech & Co-fundadora</p>
+            <p style="font-size: 13px; color: var(--secondary-text); margin-top: 8px;">
+              <i class="fa-regular fa-clock"></i> 24 de Mai • 15:00 <br><span style="font-size: 11px;">Sessão 1-on-1</span>
+            </p>
+          </div>
+          <button class="btn btn-secondary" style="width: 100%; margin-top: 16px;">Ver detalhes</button>
+        </div>
+
+        <!-- JOBS CARD -->
+        <div class="card">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <h4 style="font-size: 16px; font-weight: 700;">Vagas recomendadas</h4>
+            <a href="#" style="font-size: 13px; color: var(--secondary); font-weight: 600;">Ver todas</a>
+          </div>
+
+          <div style="padding: 12px 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <h5 style="font-size: 14px; font-weight: 600;">Front-end Pleno</h5>
+              <p style="font-size: 12px; color: var(--secondary-text);">Remoto • CLT • TechCorp</p>
+            </div>
+            <button class="btn btn-secondary" style="height: 36px; padding: 0 14px; font-size: 12px;">Ver vaga</button>
+          </div>
+
+          <div style="padding: 12px 0; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <h5 style="font-size: 14px; font-weight: 600;">UX Designer Sênior</h5>
+              <p style="font-size: 12px; color: var(--secondary-text);">Híbrido • PJ • DesignHub</p>
+            </div>
+            <button class="btn btn-secondary" style="height: 36px; padding: 0 14px; font-size: 12px;">Ver vaga</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTOS PARA VOCÊ -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+        <h3 style="font-size: 22px; font-weight: 700;">Eventos para você</h3>
+        <a href="#" style="font-size: 14px; color: var(--secondary); font-weight: 600;">Ver todos</a>
+      </div>
+
+      <div class="grid-3" id="eventos">
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/event_summit.jpg" alt="Women in Tech Summit" style="height: 160px; width: 100%; object-fit: cover;" />
+          <div style="padding: 20px;">
+            <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Women in Tech Summit 2024</h5>
+            <p style="font-size: 13px; color: var(--secondary-text); margin-bottom: 16px;">Online • 20 de Mai às 19:00</p>
+            <button class="btn btn-secondary" style="width: 100%;">Inscrever-se</button>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/event_figma.jpg" alt="Workshop Figma para Devs" style="height: 160px; width: 100%; object-fit: cover;" />
+          <div style="padding: 20px;">
+            <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Workshop: Figma para Devs</h5>
+            <p style="font-size: 13px; color: var(--secondary-text); margin-bottom: 16px;">Online • 22 de Mai às 18:30</p>
+            <button class="btn btn-secondary" style="width: 100%;">Inscrever-se</button>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="assets/event_interview.jpg" alt="Como se preparar para entrevistas tech" style="height: 160px; width: 100%; object-fit: cover;" />
+          <div style="padding: 20px;">
+            <h5 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Como se preparar para entrevistas</h5>
+            <p style="font-size: 13px; color: var(--secondary-text); margin-bottom: 16px;">Online • 24 de Mai às 17:00</p>
+            <button class="btn btn-secondary" style="width: 100%;">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR (MEU PERFIL) -->
+    <aside class="dash-sidebar" id="profileSidebar">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px;">
+        <div style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600;" onclick="history.back()">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Meu Perfil</span>
+        </div>
+        <i class="fa-solid fa-gear" style="cursor: pointer;"></i>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div style="width: 90px; height: 90px; border-radius: 50%; background: var(--grad-official); color: #FFF; font-size: 36px; font-weight: 700; display: grid; place-items: center; margin: 0 auto 16px; box-shadow: 0 8px 20px rgba(124,58,237,0.3);">
+          D
+        </div>
+        <h3 style="color: #FFFFFF; font-size: 22px; font-weight: 700;">Davi Silva</h3>
+        <p style="color: #D8B4FE; font-size: 14px; font-weight: 500;">Desenvolvedora Front-end</p>
+        <p style="color: rgba(255,255,255,0.6); font-size: 13px;">São Paulo, SP • Brasil</p>
+      </div>
+
+      <p style="font-size: 14px; color: rgba(255,255,255,0.85); text-align: center; line-height: 1.5; margin-bottom: 24px; font-style: italic;">
+        "Apaixonada por tecnologia e por criar soluções que impactam vidas. Em constante aprendizado!"
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; background: rgba(255,255,255,0.08); padding: 16px 12px; border-radius: var(--radius-btn); margin-bottom: 32px;">
+        <div>
+          <div style="font-size: 18px; font-weight: 700;">120</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.6);">Conexões</div>
+        </div>
+        <div>
+          <div style="font-size: 18px; font-weight: 700;">8</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.6);">Mentorias</div>
+        </div>
+        <div>
+          <div style="font-size: 18px; font-weight: 700;">4</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.6);">Cursos</div>
+        </div>
+      </div>
+
+      <h4 style="color: #FFFFFF; font-size: 15px; font-weight: 600; margin-bottom: 12px;">Áreas de interesse</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;">
+        <span style="background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: var(--radius-pill); font-size: 12px; color: #FFFFFF;">Desenvolvimento Front-end</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: var(--radius-pill); font-size: 12px; color: #FFFFFF;">UX/UI Design</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: var(--radius-pill); font-size: 12px; color: #FFFFFF;">JavaScript</span>
+        <span style="background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: var(--radius-pill); font-size: 12px; color: #FFFFFF;">React</span>
+      </div>
+
+      <h4 style="color: #FFFFFF; font-size: 15px; font-weight: 600; margin-bottom: 8px;">Resumo</h4>
+      <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin-bottom: 32px;">
+        Desenvolvedora Front-end com 3 anos de experiência em construção de interfaces modernas e acessíveis. Focada em criar experiências incríveis para as pessoas.
+      </p>
+
+      <h4 style="color: #FFFFFF; font-size: 15px; font-weight: 600; margin-bottom: 12px;">Conquistas</h4>
+      <div style="display: flex; align-items: center; justify-content: space-around;">
+        <div style="width: 44px; height: 44px; background: var(--grad-official); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: grid; place-items: center; color: #FFF; font-size: 18px;"><i class="fa-solid fa-award"></i></div>
+        <div style="width: 44px; height: 44px; background: var(--grad-official); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: grid; place-items: center; color: #FFF; font-size: 18px;"><i class="fa-solid fa-fire"></i></div>
+        <div style="width: 44px; height: 44px; background: var(--grad-official); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: grid; place-items: center; color: #FFF; font-size: 18px;"><i class="fa-solid fa-star"></i></div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('profileSidebar');
+      if (sidebar.style.display === 'none') {
+        sidebar.style.display = 'block';
+      } else {
+        sidebar.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
